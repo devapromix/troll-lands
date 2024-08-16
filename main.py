@@ -1,4 +1,4 @@
-import sys, pygame, json
+import sys, os, pygame, json
 from common.colors import *
 from common.constants import *
 from common.engine import *
@@ -19,6 +19,11 @@ while True:
             sys.exit()
 
     out(GAME_TITLE, 10, 10, font, screen)
+    
+    f = open("assets/data/lands.json")
+    lands = json.load(f)
+    out(lands["title"], 10, 50, font, screen)
+    out(lands["descr"], 10, 80, font, screen)
     
     pygame.display.flip()
 
