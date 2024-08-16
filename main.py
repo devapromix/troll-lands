@@ -22,6 +22,8 @@ while True:
     
     f = open("assets/data/lands.json")
     lands = json.load(f)
+    f.close()
+    
     out(lands["title"], 10, 50, font, screen)
     out(lands["descr"], 10, 80, font, screen)
     
