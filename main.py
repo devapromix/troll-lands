@@ -18,14 +18,12 @@ while True:
             pygame.quit()
             sys.exit()
 
-    out(GAME_TITLE, 10, 10, font, screen)
-    
     f = open("assets/data/lands.json")
     lands = json.load(f)
     f.close()
     
     out(lands["title"], 10, 50, font, screen)
-    out(lands["descr"], 10, 80, font, screen)
+    out_list(lands["descr"].split("/"), 10, 80, font, screen)
     
     pygame.display.flip()
 
