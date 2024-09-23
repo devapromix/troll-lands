@@ -29,10 +29,18 @@ while True:
 
 
 
+'''
+import json
 
+# Відкриваємо JSON-файл
+with open('data.json', 'r') as file:
+    data = json.load(file)
 
+# Виводимо масив даних
+for item in data:
+    print(item)
 
-
+'''
 
 
 
